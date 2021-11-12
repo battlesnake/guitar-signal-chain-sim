@@ -1,0 +1,391 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 9449 4724
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	2200 1200 2200 1350
+Wire Wire Line
+	2100 1200 2200 1200
+$Comp
+L Device:C C2
+U 1 1 618F0C93
+P 2200 1500
+F 0 "C2" H 2315 1546 50  0000 L CNN
+F 1 "10p" H 2315 1455 50  0000 L CNN
+F 2 "" H 2238 1350 50  0001 C CNN
+F 3 "~" H 2200 1500 50  0001 C CNN
+F 4 "" H 2315 1409 50  0000 L CNN "Typical"
+	1    2200 1500
+	1    0    0    -1  
+$EndComp
+Text Notes 700  750  0    98   ~ 20
+Pickup
+$Comp
+L pspice:0 #GND06
+U 1 1 618EE4B6
+P 750 2700
+F 0 "#GND06" H 750 2600 50  0001 C CNN
+F 1 "0" H 750 2789 50  0000 C CNN
+F 2 "" H 750 2700 50  0001 C CNN
+F 3 "~" H 750 2700 50  0001 C CNN
+	1    750  2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 1200 1200 1350
+Wire Wire Line
+	750  1200 1200 1200
+$Comp
+L Device:R R7
+U 1 1 618ED104
+P 750 1650
+F 0 "R7" H 820 1741 50  0000 L CNN
+F 1 "10k" H 820 1650 50  0000 L CNN
+F 2 "" V 680 1650 50  0001 C CNN
+F 3 "~" H 750 1650 50  0001 C CNN
+F 4 "4k..15k" H 820 1559 50  0000 L CNN "Typical"
+	1    750  1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND01
+U 1 1 618F60DD
+P 2200 1850
+F 0 "#GND01" H 2200 1750 50  0001 C CNN
+F 1 "0" H 2200 1939 50  0000 C CNN
+F 2 "" H 2200 1850 50  0001 C CNN
+F 3 "~" H 2200 1850 50  0001 C CNN
+	1    2200 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 1850 2200 1650
+Text Notes 1800 750  0    98   ~ 20
+Selector
+$Comp
+L Device:R R4
+U 1 1 618F6788
+P 3200 1350
+F 0 "R4" H 3130 1259 50  0000 R CNN
+F 1 "250k" H 3130 1350 50  0000 R CNN
+F 2 "" V 3130 1350 50  0001 C CNN
+F 3 "~" H 3200 1350 50  0001 C CNN
+F 4 "Var:0..250k" H 3130 1441 50  0000 R CNN "Typical"
+	1    3200 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 618F77CB
+P 3200 1650
+F 0 "C5" H 3315 1741 50  0000 L CNN
+F 1 "22n" H 3315 1650 50  0000 L CNN
+F 2 "" H 3238 1500 50  0001 C CNN
+F 3 "~" H 3200 1650 50  0001 C CNN
+F 4 "3..100n" H 3315 1559 50  0000 L CNN "Typical"
+	1    3200 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND07
+U 1 1 618F8351
+P 3200 2000
+F 0 "#GND07" H 3200 1900 50  0001 C CNN
+F 1 "0" H 3200 2089 50  0000 C CNN
+F 2 "" H 3200 2000 50  0001 C CNN
+F 3 "~" H 3200 2000 50  0001 C CNN
+	1    3200 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2000 3200 1800
+Text Notes 3000 750  0    98   ~ 20
+Tone
+Wire Wire Line
+	2200 1200 3200 1200
+Connection ~ 2200 1200
+$Comp
+L Device:R R5
+U 1 1 618F90C8
+P 4450 1500
+F 0 "R5" H 4520 1591 50  0000 L CNN
+F 1 "500k" H 4520 1500 50  0000 L CNN
+F 2 "" V 4380 1500 50  0001 C CNN
+F 3 "~" H 4450 1500 50  0001 C CNN
+F 4 "Var:otherside" H 4520 1409 50  0000 L CNN "Typical"
+	1    4450 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND02
+U 1 1 618FA0A1
+P 4450 1850
+F 0 "#GND02" H 4450 1750 50  0001 C CNN
+F 1 "0" H 4450 1939 50  0000 C CNN
+F 2 "" H 4450 1850 50  0001 C CNN
+F 3 "~" H 4450 1850 50  0001 C CNN
+	1    4450 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 1850 4450 1650
+Wire Wire Line
+	4300 1200 4450 1200
+Wire Wire Line
+	4450 1200 4450 1350
+Wire Wire Line
+	4000 1200 3200 1200
+Connection ~ 3200 1200
+Text Notes 3950 750  0    98   ~ 20
+Volume
+$Comp
+L Device:C C3
+U 1 1 618FA6DA
+P 5350 1500
+F 0 "C3" H 5465 1591 50  0000 L CNN
+F 1 "5p" H 5465 1500 50  0000 L CNN
+F 2 "" H 5388 1350 50  0001 C CNN
+F 3 "~" H 5350 1500 50  0001 C CNN
+F 4 "1p..10p" H 5465 1409 50  0000 L CNN "Typical"
+	1    5350 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 1350 5350 1200
+Wire Wire Line
+	5350 1200 4450 1200
+Connection ~ 4450 1200
+$Comp
+L pspice:0 #GND03
+U 1 1 618FB503
+P 5350 1850
+F 0 "#GND03" H 5350 1750 50  0001 C CNN
+F 1 "0" H 5350 1939 50  0000 C CNN
+F 2 "" H 5350 1850 50  0001 C CNN
+F 3 "~" H 5350 1850 50  0001 C CNN
+	1    5350 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 1850 5350 1650
+Text Notes 5200 750  0    98   ~ 20
+Jack
+$Comp
+L Device:C C4
+U 1 1 618FD2EA
+P 6250 1500
+F 0 "C4" H 6365 1591 50  0000 L CNN
+F 1 "50p" H 6365 1500 50  0000 L CNN
+F 2 "" H 6288 1350 50  0001 C CNN
+F 3 "~" H 6250 1500 50  0001 C CNN
+F 4 "10p..500p" H 6365 1409 50  0000 L CNN "Typical"
+	1    6250 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 1350 6250 1200
+Wire Wire Line
+	6250 1200 5350 1200
+$Comp
+L pspice:0 #GND04
+U 1 1 618FD2F2
+P 6250 1850
+F 0 "#GND04" H 6250 1750 50  0001 C CNN
+F 1 "0" H 6250 1939 50  0000 C CNN
+F 2 "" H 6250 1850 50  0001 C CNN
+F 3 "~" H 6250 1850 50  0001 C CNN
+	1    6250 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 1850 6250 1650
+Text Notes 6100 750  0    98   ~ 20
+Cable
+Connection ~ 5350 1200
+Wire Wire Line
+	6450 1200 6250 1200
+Connection ~ 6250 1200
+$Comp
+L Device:R R6
+U 1 1 61901CC1
+P 7350 1500
+F 0 "R6" H 7420 1591 50  0000 L CNN
+F 1 "2Meg" H 7420 1500 50  0000 L CNN
+F 2 "" V 7280 1500 50  0001 C CNN
+F 3 "500k..5M" H 7420 1409 50  0000 L CNN
+	1    7350 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 1200 7350 1350
+Text Notes 7200 750  0    98   ~ 20
+Load
+$Comp
+L pspice:0 #GND05
+U 1 1 61902E00
+P 7350 1850
+F 0 "#GND05" H 7350 1750 50  0001 C CNN
+F 1 "0" H 7350 1939 50  0000 C CNN
+F 2 "" H 7350 1850 50  0001 C CNN
+F 3 "~" H 7350 1850 50  0001 C CNN
+	1    7350 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 1850 7350 1650
+Text Label 7350 1200 0    50   ~ 0
+OUT
+Wire Wire Line
+	750  1900 750  1800
+Wire Wire Line
+	1200 2600 750  2600
+Wire Wire Line
+	1200 1650 1200 2600
+Connection ~ 750  2600
+Wire Wire Line
+	750  2600 750  2700
+Text Label 750  1900 0    50   ~ 0
+DRV
+Text Label 1200 1200 0    50   ~ 0
+GEN
+$Comp
+L Simulation_SPICE:VDC Vac1
+U 1 1 6190D458
+P 750 2100
+F 0 "Vac1" H 880 2191 50  0000 L CNN
+F 1 "VAC" H 880 2100 50  0000 L CNN
+F 2 "" H 750 2100 50  0001 C CNN
+F 3 "~" H 750 2100 50  0001 C CNN
+F 4 "Y" H 750 2100 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "VAC" H 750 2100 50  0001 L CNN "Spice_Primitive"
+F 6 "dc(0) ac(1)" H 880 2009 50  0000 L CNN "Spice_Model"
+	1    750  2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  2300 750  2600
+Text Notes 650  3650 0    50   ~ 0
+.ac dec 100 10 100k\n.control\n  set controlswait\n  let drv=V("/DRV")\n  let gen=V("/GEN")\n  let out=V("/OUT")\n.endc
+NoConn ~ 2050 3200
+NoConn ~ 2050 3350
+NoConn ~ 2050 3500
+$Comp
+L Device:R R10
+U 1 1 6190AC5A
+P 1900 3500
+F 0 "R10" V 1693 3500 50  0000 C CNN
+F 1 "2g" V 1784 3500 50  0000 C CNN
+F 2 "" V 1830 3500 50  0001 C CNN
+F 3 "~" H 1900 3500 50  0001 C CNN
+	1    1900 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 6190AAB5
+P 1900 3350
+F 0 "R9" V 1693 3350 50  0000 C CNN
+F 1 "2g" V 1784 3350 50  0000 C CNN
+F 2 "" V 1830 3350 50  0001 C CNN
+F 3 "~" H 1900 3350 50  0001 C CNN
+	1    1900 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 6190A560
+P 1900 3200
+F 0 "R8" V 1693 3200 50  0000 C CNN
+F 1 "2g" V 1784 3200 50  0000 C CNN
+F 2 "" V 1830 3200 50  0001 C CNN
+F 3 "~" H 1900 3200 50  0001 C CNN
+	1    1900 3200
+	0    1    1    0   
+$EndComp
+Text GLabel 1750 3500 0    50   Input ~ 0
+out
+Text GLabel 1750 3350 0    50   Input ~ 0
+gen
+Text GLabel 1750 3200 0    50   Input ~ 0
+drv
+$Comp
+L Device:L L1
+U 1 1 618EC1F3
+P 750 1350
+F 0 "L1" H 802 1441 50  0000 L CNN
+F 1 "3" H 802 1350 50  0000 L CNN
+F 2 "" H 750 1350 50  0001 C CNN
+F 3 "~" H 750 1350 50  0001 C CNN
+F 4 "1..20" H 802 1259 50  0000 L CNN "Typical"
+	1    750  1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 618F047F
+P 1950 1200
+F 0 "R1" V 1653 1200 50  0000 C CNN
+F 1 "1" V 1744 1200 50  0000 C CNN
+F 2 "" V 1880 1200 50  0001 C CNN
+F 3 "~" H 1950 1200 50  0001 C CNN
+F 4 "0..2" V 1835 1200 50  0000 C CNN "Typical"
+	1    1950 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 618F872E
+P 4150 1200
+F 0 "R2" V 4447 1200 50  0000 C CNN
+F 1 "1" V 4356 1200 50  0000 C CNN
+F 2 "" V 4080 1200 50  0001 C CNN
+F 3 "~" H 4150 1200 50  0001 C CNN
+F 4 "Var:0..250k/500k" V 4265 1200 50  0000 C CNN "Typical"
+	1    4150 1200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 618FE247
+P 6600 1200
+F 0 "R3" V 6897 1200 50  0000 C CNN
+F 1 "5" V 6806 1200 50  0000 C CNN
+F 2 "" V 6530 1200 50  0001 C CNN
+F 3 "~" H 6600 1200 50  0001 C CNN
+F 4 "1..50" V 6715 1200 50  0000 C CNN "Typical"
+	1    6600 1200
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1200 1200
+Wire Wire Line
+	6750 1200 7350 1200
+Wire Wire Line
+	1200 1200 1800 1200
+Text Notes 750  850  0    50   ~ 0
+single coil
+$Comp
+L Device:C C1
+U 1 1 618ED874
+P 1200 1500
+F 0 "C1" H 1315 1591 50  0000 L CNN
+F 1 "100p" H 1315 1500 50  0000 L CNN
+F 2 "" H 1238 1350 50  0001 C CNN
+F 3 "~" H 1200 1500 50  0001 C CNN
+F 4 "100p..300p" H 1315 1409 50  0000 L CNN "Typical"
+	1    1200 1500
+	1    0    0    -1  
+$EndComp
+Text Notes 650  4200 0    50   ~ 0
+Semi-useful for reference values to test with:\nhttps://bedlamguitars.wordpress.com/technical-info/pickup-inductance/
+$EndSCHEMATC
